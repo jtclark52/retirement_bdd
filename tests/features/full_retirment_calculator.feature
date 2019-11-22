@@ -32,7 +32,7 @@ Feature:  Full Retirement Age Calculator
 
 
 	Scenario Outline: Gives an exception when invalid year is given
-		Given the "<Invalid_birth_year>"
+		Given the "<invalid_birth_year>"
         When calculating for retirement age and month
         Then error message should display
 
