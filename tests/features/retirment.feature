@@ -32,7 +32,7 @@ Feature:  Full Retirement Age Calculator
 
 
 	Scenario Outline: Gives an exception when invalid year is given
-		Given the <Invalid_birth_year>
+		Given the "<Invalid_birth_year>"
         When calculating for retirement age and month
         Then error message should display
 
@@ -44,7 +44,7 @@ Feature:  Full Retirement Age Calculator
 
 
     Scenario Outline: Gives an exception when year given is before 1900
-		Given the <birth_year>
+		Given the "<birth_year>"
 		When the birth_year is before 1900
         Then error message should display
 
@@ -55,7 +55,7 @@ Feature:  Full Retirement Age Calculator
 			| 1899	     |
 
     Scenario Outline: Gives an exception when year given is after 3000
-		Given the <birth_year>
+		Given the "<birth_year>"
 		When the birth_year is after 3000
         Then error message should display
 
@@ -67,7 +67,7 @@ Feature:  Full Retirement Age Calculator
 
 
 	Scenario Outline: Gives an exception when birth_month given is before invalid
-		Given the <birth_year>  and <birth_month>
+		Given the "<birth_year>"  and "<birth_month>"
 		When the birth_month is invalid
         Then error message should display
 
